@@ -1,62 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto,'sans-serif';
+@use "./config/reset";
+@use "./config/variaveis.scss";
 
+body {
+    background-color: #f5f6fa;
 }
-
-
-$corPrincipal:#182C61;
-$corBody: #f5f6fa;
-
-body{  
-   background-color: $corBody; 
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
 }
 header{
-    background-color: $corPrincipal;
-    background-color: #182C61;
+    background-color: variaveis.$corPrincipal;
     position: sticky;
     top: 0;
     left: 0;
 
+    h1{
+        color: white;
+    }
+
+    
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+
     li {
         list-style: none;
     }
-
-    .container {
-        max-width: 1024px;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 0;
-        
-    }
-
     .menu {
         display: flex;
     }
-    .menu li a {
-        color: #fff;
-        text-decoration: none;
-    }
+    
     .menu li {
         font-weight: bold;
         margin-left: 24px;
     }
+    
     .menu li a {
         color: #fff;
         text-decoration: none;
     }
-   
 }
+
 section {
     padding: 56px 0;
-
-    
 }
+
 .products {
     margin-top: 40px;
     display: grid;
@@ -64,29 +58,62 @@ section {
     column-gap: 1%;
     row-gap: 4%;
     width: 100%;
-    
+
     .product-item img {
         width: 100%;
-        border-radius: 16px;   
+        border-radius: 16px;
     }
-
     .product-button {
         display: block;
-        background-color: #44bd32;
+        background-color:variaveis.$corCard;
         color: #fff;
         text-align: center;
         padding: 8px 0;
         border-radius: 8px;
         margin-top: 8px;
-        text-decoration: none;
-
+        text-decoration: none; 
+        
         &.product-button:hover{
-            background-color: #18720a;
+            background-color: greenyellow;
+        }
+
+
+    }
+    li {
+        list-style: none;
+    }
+}
+
+@media screen and (max-width:variaveis.$mobile) {
+    header{
+        max-width: 100%;
+
+        h1{
+            font-size: 1.5em;
         }
     }
+    .container{
+        max-width: 90%;
+    }
+
+    .products{
+        display: block;
     }
     
+}
+
+@media screen and (min-width:768px) and (max-width:variaveis.$tablet) {
+    header{
+        max-width: 100%;
+    }
+    .container{
+        max-width: 90%;
+    }
+    
+}
 
 
+
+    
 
 

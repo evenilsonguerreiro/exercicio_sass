@@ -17,11 +17,6 @@ li {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    
 }
 
 header {
@@ -31,7 +26,7 @@ header {
     left: 0;
 }
 
-.container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,8 +49,6 @@ header {
 
 section {
     padding: 56px 0;
-
-    
 }
 
 .products {
@@ -65,9 +58,6 @@ section {
     column-gap: 1%;
     row-gap: 4%;
     width: 100%;
-
-
-
 }
 
 .product-item img {
